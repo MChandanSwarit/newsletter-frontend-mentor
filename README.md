@@ -11,12 +11,8 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -34,20 +30,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Larger Screens](image.png)
+![Smaller Screens](image-1.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View Solution](https://your-solution-url.com)
+- Live Site URL: [View Live Site](https://newsletter-frontend-mentor-five.vercel.app/)
 
 ## My process
 
@@ -58,59 +47,65 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Learned how to create responsive, accessible form layouts using semantic HTML elements and organized CSS for consistent design across different screen sizes.
 
-To see how you can add code snippets, see below:
+- Enhanced my understanding of how to handle form submissions and validate email inputs in JavaScript, ensuring user data is in the correct format before processing.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- Gained insights into providing clear feedback to users through error states and success messages, improving the overall UX by making the form more interactive and user-friendly.
+
+- Applied mobile-first design principles, ensuring the newsletter form and success message display properly on smaller devices while adapting effectively to larger screens with media queries.
+
+- Improved my knowledge of using Git for version control, including creating branches, making commits, and pushing code to a remote repository on GitHub.
+
+Some code snippets that were a challenge:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.signup-form ul li {
+  color: var(--dark-grey);
+  list-style-type: none;
+  padding-bottom: 1rem;
+  text-indent: -2.25rem;
+  margin-left: 2.25rem;
 }
+
+.signup-form li::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../assets/images/icon-list.svg);
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  if (emailError) {
+    const emailErrorElement = form.querySelector('#email-error');
+    const emailErrorColor = document.getElementById('email');
+    emailErrorElement.innerText = emailError;
+    emailErrorColor.classList.add('error-state');
+  } else {
+    const successMessageElement = document.querySelector('.success-message');
+    const container = document.querySelector('.form-container');
+    const emailText = document.querySelector('.success-message .email-text');
+    container.style.display = 'none';
+    successMessageElement.style.display = 'block';
+    emailText.innerText = email;
+    emailErrorColor.classList.remove('error-state');
+  }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - MDN Web Docs is the best way to gain knowledge about various styling properties and javascript realted concepts that you probably did not know existed.
+- [ChatGPT](https://chatgpt.com/) - GPT helped me get past various roadblocks, especially in styling the components.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Chandan Swarit
+- Frontend Mentor - [MChandanSwarit](https://www.frontendmentor.io/profile/MChandanSwarit)
