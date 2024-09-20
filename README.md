@@ -35,7 +35,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View Solution](https://your-solution-url.com)
 - Live Site URL: [View Live Site](https://newsletter-frontend-mentor-five.vercel.app/)
 
 ## My process
